@@ -5,8 +5,6 @@
     image: hello-world
     detach: no
     state: started
-    ports:
-        - "80:80"
   register: podman_container_output 
 
 - name: Show test output
