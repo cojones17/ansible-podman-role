@@ -1,11 +1,14 @@
 ---
 - name: Run container
   containers.podman.podman_container:
-    name: container
+    name: hello-world-demo-container
     image: hello-world
+    detach: no
     state: started
-      exposed_ports:
-        - 80
-      ports:
-        - 4444:80
-  
+    ports:
+        - "80:80"
+  register: podman_container_output 
+
+- name: Show test output
+  debug:
+    msg: "{{ podman_container_output.ansible_facts.podman_container.Output }}"
