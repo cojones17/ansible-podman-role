@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This Ansible role deploys a simple Hello, World application by leveraging both Docker and Podman. The role can be run from any laptop or server that has Ansible installed 
+This Ansible role deploys a simple Hello, World Docker application by leveraging both Ansible and Podman. This role can be run from any laptop or server that has a supported version of Ansible installed. 
 
 Requirements
 ------------
@@ -19,7 +19,6 @@ None
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 ```
 - name: ansible podman play
   hosts: adm
@@ -30,6 +29,10 @@ Including an example of how to use your role (for instance, with variables passe
     - { role: ansible-podman-role } 
 ```
 
+Roadmap
+-------
+- Enhance usage of variables to make the role more container image agnostic 
+
 License
 -------
 
@@ -37,4 +40,4 @@ BSD
 
 Author Information
 ------------------
-Connor Jones 
+This role was created in 2022 by [Connor Jones](https://github.com/cojones17/) and [Patrick Freeman](https://github.com/freemanpdwork)
