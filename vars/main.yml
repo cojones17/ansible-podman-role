@@ -1,3 +1,2 @@
 ---
 # vars file for ansible-podman-role
-podman_container_output = ""
